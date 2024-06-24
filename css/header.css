@@ -52,17 +52,7 @@ tr:hover{
     background-color: rgba(141, 141, 141, 0.11);
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
 
-th, td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
 .td_tds{
     display: flex;
     align-items: center;
@@ -106,22 +96,6 @@ th, td {
         align-items: center;
     }
 
-    table, thead, tbody, th, td, tr {
-        display: block;
-    }
-
-    thead tr {
-        display: none;
-    }
-
-    td {
-        position: relative;
-        padding-left: 50%;
-        text-align: right;
-        border: none;
-        border-bottom: 1px solid #ddd;
-    }
-
     td:before {
         content: attr(data-label);
         position: absolute;
@@ -133,22 +107,6 @@ th, td {
     }
 }
 /* next page start */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-th {
-    background-color: #f8f8f8;
-}
-tr:hover {
-    background-color: #f1f1f1;
-}
 .people_ppp {
     border-radius: 50%;
     width: 40px;
@@ -159,30 +117,6 @@ tr:hover {
 }
 .losses {
     color: red;
-}
-@media (max-width: 768px) {
-    table, thead, tbody, th, td, tr {
-        display: block;
-    }
-    thead tr {
-        display: none;
-    }
-    tr {
-        margin-bottom: 10px;
-        border: 1px solid #ddd;
-    }
-    td {
-        padding: 10px;
-        text-align: right;
-        position: relative;
-    }
-    td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 10px;
-        text-align: left;
-        font-weight: bold;
-    }
 }
 
 /* style.css */
@@ -235,7 +169,7 @@ tr:hover {
       }
     
       .sidebar.hidden + .information-section {
-        margin-top: -180px;
+        margin-top: -220px;
         margin-left: 0; /* Ensure no margin when sidebar is hidden */
       }
   }
@@ -260,3 +194,137 @@ tr:hover {
     }
   }
   
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+.ovr_btn_one{
+    background-color: rgb(9, 255, 0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table thead {
+    background-color: white;
+}
+.table th, .table td {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.table th {
+    font-weight: normal;
+    color: #b0b0b0;
+}
+.table td img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.priority {
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 14px;
+    display: inline-block;
+}
+.high {
+    background-color: #ff4757;
+}
+.normal {
+    background-color: #2ed573;
+}
+.low {
+    background-color: #ffa502;
+}
+.dot-menu {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+    .header{
+        display: flex;
+        justify-content: space-between;
+    }
+    /* .header {
+        flex-direction: column;
+        align-items: flex-start;
+    } */
+    .header h1 {
+        margin-bottom: 10px;
+    }
+    .table th, .table td {
+        padding: 10px;
+    }
+    .table td img {
+        width: 30px;
+        height: 30px;
+    }
+    .table {
+        font-size: 14px;
+    }
+    .priority {
+        padding: 3px 7px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 480px) {
+    .header button {
+        /* width: 100%; */
+        text-align: center;
+    }
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .table th, .table td {
+        padding: 8px;
+    }
+    .triplle_btn_two_in_one{
+        display: flex;
+        gap: 30px;
+    }
+}
+@media (max-width: 480px) {
+    .sidebar {
+      transform: translateY(0); /* Reset any translateY applied */
+    }
+  
+    .sidebar.hidden {
+      transform: translateY(-100%); /* Slide the sidebar upwards when hidden */
+    }
+  
+    .information-section {
+        transition: margin-top 0.3s ease;
+      margin-left: 0; /* No margin on smaller screens */
+    }
+  
+    .sidebar.hidden + .information-section {
+      margin-top: -400px;
+      margin-left: 0; /* Ensure no margin when sidebar is hidden */
+    }
+  }
