@@ -82,6 +82,15 @@ body {
     color: #B0B0B0;
     transition: background-color 0.3s;
 }
+.menu-item a{
+    font-size: 16px;
+}
+.menu-item-tic{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    
+}
 
 .menu-item.active, .menu-item:hover {
     border-left: 3px solid rgba(221, 226, 255, 1);
